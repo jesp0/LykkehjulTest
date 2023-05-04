@@ -103,15 +103,15 @@ public class LykkeHjulTest extends Application {
         stage.show();
     }
 
-    public void spinnHjul(){
-        animation.play();
-    }
-
     public void hjulAnimasjon(){
         animation = new Timeline(
                 new KeyFrame(Duration.millis(15), e -> lykkehjul.setRotate(hjulspinn+=1.0)));
         animation.setCycleCount(Timeline.INDEFINITE);
         //animation.play();
+    }
+
+    public void spinnHjul(){
+        animation.play();
     }
 
     public void stoppHjul(){
